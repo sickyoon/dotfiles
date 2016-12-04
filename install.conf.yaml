@@ -1,0 +1,65 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.dotfiles: ''
+    ~/.tmux.conf:
+      relink: true
+      path: tmux/tmux.conf
+    ~/.oh-my-zsh:
+      force: true
+      create: true
+      path: zsh/oh-my-zsh
+    ~/.zshrc:
+      force: true
+      create: true
+      path: zsh/zshrc
+    ~/.vim:
+      force: true
+      create: true
+      path: vim
+    ~/.gitconfig:
+      force: true
+      create: true
+      path: git/gitconfig
+    ~/.nvm:
+      force: true
+      create: true
+      path: tools/nvm
+
+- shell:
+  -
+    command: git pull
+    description: Updating dotfiles
+    stdout: true
+    stderr: true
+  -
+    command: git submodule update --init --recursive
+    description: Installing submodules
+    stdout: true
+    stderr: true
+
+  # install pathogen
+  -
+    command: curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+    description: Installing vim-pathogen
+    stdout: true
+    stderr: true
+
+  # install pip
+  -
+    command: sudo curl -o- https://bootstrap.pypa.io/get-pip.py | python
+    description: Installing python-pip
+    stdout: true
+    stderr: true
+
+  # install virtualenv
+  -
+    command: sudo pip install virtualenv virtualenvwrapper
+    description: Installing python virtualenv
+    stdout: true
+    stderr: true
+
