@@ -2,6 +2,7 @@
 call pathogen#infect()
 syntax on
 filetype plugin indent on
+set background=dark
 colorscheme railscasts
 
 
@@ -45,3 +46,7 @@ endif
 " remove trailing whitespace on save
 autocmd BufWritePre * :%s/\s\+$//e
 
+" tmux
+let g:tmux_navigator_no_mappings = 1
+
+source \~/.vim/plugins-config.vim
