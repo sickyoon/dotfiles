@@ -10,14 +10,14 @@
       force: true
       create: true
       path: tmux/tmux.conf
-    ~/.oh-my-zsh:
-      force: true
-      create: true
-      path: zsh/oh-my-zsh
-    ~/.zshrc:
-      force: true
-      create: true
-      path: zsh/zshrc
+      #~/.oh-my-zsh:
+      #force: true
+      #create: true
+      #path: zsh/oh-my-zsh
+      #~/.zshrc:
+      #force: true
+      #create: true
+      #path: zsh/zshrc
     ~/.vim:
       force: true
       create: true
@@ -26,10 +26,10 @@
       force: true
       create: true
       path: git/gitconfig
-    ~/.nvm:
-      force: true
-      create: true
-      path: tools/nvm
+      #~/.nvm:
+      #force: true
+      #create: true
+      #path: tools/nvm
 
 - shell:
   -
