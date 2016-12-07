@@ -43,13 +43,6 @@
     stdout: true
     stderr: true
 
-  # install pathogen
-  -
-    command: curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
-    description: Installing vim-pathogen
-    stdout: true
-    stderr: true
-
   # install pip
   -
     command: sudo curl -o- https://bootstrap.pypa.io/get-pip.py | python

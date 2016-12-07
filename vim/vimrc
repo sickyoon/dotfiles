@@ -1,10 +1,17 @@
-" pathogen
-call pathogen#infect()
+" plugins
+call plug#begin()
+Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'vim-tmux-navigator'
+Plug 'fatih/vim-go', {'tag': '*'}
+Plug 'nsf/gocode'
+call plug#end()
+
 syntax on
 filetype plugin indent on
 set background=dark
 colorscheme railscasts
-
 
 set nocompatible
 set linebreak
