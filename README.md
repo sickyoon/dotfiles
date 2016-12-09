@@ -1,6 +1,9 @@
 
 # dotfile
 
+Dotfile for Ubuntu setup
+
+
 # Post Setup
 
 * homebrew

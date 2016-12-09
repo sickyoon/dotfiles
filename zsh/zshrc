@@ -65,11 +65,7 @@ export LC_CTYPE=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-  export EDITOR='vim'
-else
-  export EDITOR='mvim'
-fi
+export EDITOR='vim'
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -86,11 +82,13 @@ fi
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
+''' MAC ONLY
 # homebrew binary
 export PATH=/usr/local/bin:$PATH
 
 # android sdk
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+'''
 
 # go
 export GOPATH=$HOME/go

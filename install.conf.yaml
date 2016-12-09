@@ -6,30 +6,26 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.tmux.conf:
-      force: true
-      create: true
-      path: tmux/tmux.conf
-      #~/.oh-my-zsh:
-      #force: true
-      #create: true
-      #path: zsh/oh-my-zsh
-      #~/.zshrc:
-      #force: true
-      #create: true
-      #path: zsh/zshrc
     ~/.vim:
       force: true
       create: true
       path: vim
+    ~/.zshrc:
+      force: true
+      create: true
+      path: zsh/zshrc
+    ~/.tmux.conf:
+      force: true
+      create: true
+      path: tmux/tmux.conf
     ~/.gitconfig:
       force: true
       create: true
       path: git/gitconfig
-      #~/.nvm:
-      #force: true
-      #create: true
-      #path: tools/nvm
+    ~/.nvm:
+      force: true
+      create: true
+      path: tools/nvm
 
 - shell:
   -
@@ -42,15 +38,16 @@
     description: Installing submodules
     stdout: true
     stderr: true
-
-  # install pip
+  -
+    command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+    description: Installing oh-my-zsh
+    stdout: true
+    stderr: true
   -
     command: sudo curl -o- https://bootstrap.pypa.io/get-pip.py | python
     description: Installing python-pip
     stdout: true
     stderr: true
-
-  # install virtualenv
   -
     command: sudo pip install virtualenv virtualenvwrapper
     description: Installing python virtualenv

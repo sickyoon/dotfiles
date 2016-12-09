@@ -1,57 +1,23 @@
-" plugins
-call plug#begin()
-Plug 'scrooloose/nerdtree', {'on': 'NERDTreeToggle'}
-Plug 'jistr/vim-nerdtree-tabs'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'vim-tmux-navigator'
-Plug 'fatih/vim-go', {'tag': '*'}
-Plug 'nsf/gocode'
-call plug#end()
+
+" Pathogen (tpope/vim-pathogen)
+call pathogen#infect()
 
 syntax on
 filetype plugin indent on
-set background=dark
-colorscheme railscasts
+colorscheme molokai
 
-set nocompatible
-set linebreak
 set number
-set mouse=a
-set foldmethod=marker
-set foldlevelstart=1
-set encoding=utf-8
-set fileencodings=utf-8
-set tags=./tags,./TAGS,tags,TAGS
-set autoindent
-set smartindent
-set cindent
-set shiftwidth=4
-set wildignore=*.pyc
-set ignorecase
-set smartcase
-set hlsearch
-set incsearch
-set shiftround
-set history=1000
-set undolevels=1000
-set noswapfile
-set nobackup
-set linespace=3
-set hidden
 
-set tabstop=4 softtabstop=0 expandtab shiftwidth=4 smarttab
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+function! HasPaste()
+  if &paste
+    return 'PASTE MODE  '
+  endif
+    return ''
+endfunction
 
-if has("cscope")
-  set csto=0
-  set cst
-  set nocsverb
-  set csverb
-endif
+let g:user_zen_mode='a'
+let g:go_fmt_command="goimports"
+let g:syntastic_auto_loc_list=1
+let g:syntastic_go_checkers=['go', 'golint', 'errcheck']
 
-" remove trailing whitespace on save
-autocmd BufWritePre * :%s/\s\+$//e
-
-" tmux
-let g:tmux_navigator_no_mappings = 1
-
-source \~/.vim/plugins-config.vim
