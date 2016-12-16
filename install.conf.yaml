@@ -6,10 +6,14 @@
 
 - link:
     ~/.dotfiles: ''
-    ~/.vim:
+    ~/.vim_runtime/my_configs.vim:
       force: true
       create: true
-      path: vim
+      path: vim/my_configs.vim
+    ~/.vim/bundle:
+      force: true
+      create: true
+      path: vim/bundle
     ~/.zshrc:
       force: true
       create: true

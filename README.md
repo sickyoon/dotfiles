@@ -1,21 +1,15 @@
 
 # dotfile
 
-Dotfile for Ubuntu setup
+personal dotfile
 
+## Dependencies
 
-# Post Setup
+* zsh
+* tmux
+* github.com/amix/vimrc
 
-* homebrew
-* brew install zsh
-* brew install tmux
-* brew install reattach-to-user-namespace
-* brew install macvim
-* nvm install stable
-* install go from source
+## License
 
-## Thanks to
-
-* https://github.com/anishathalye
-* https://github.com/jinmel
+MIT
 

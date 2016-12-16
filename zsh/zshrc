@@ -82,17 +82,18 @@ export EDITOR='vim'
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-''' MAC ONLY
 # homebrew binary
 export PATH=/usr/local/bin:$PATH
 
 # android sdk
 export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
-'''
 
 # go
 export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin
+alias gob="go build -gcflags '-m -l'"
+alias goi="go install ./..."
+alias goprof="go tool pprof"
 
 # nvm
 export NVM_DIR=$HOME/.nvm
@@ -104,3 +105,9 @@ eval "$(rbenv init -)"
 # virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
 
+source $HOME/z.sh
+
+# hugo aliases
+alias hugod="hugo server --buildDrafts"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
