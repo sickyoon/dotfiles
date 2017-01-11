@@ -14,10 +14,10 @@
       force: true
       create: true
       path: vim/bundle
-    ~/.zshrc:
+    ~/.mac_zshrc:
       force: true
       create: true
-      path: zsh/zshrc
+      path: zsh/mac_zshrc
     ~/.tmux.conf:
       force: true
       create: true
@@ -32,6 +32,8 @@
       path: tools/nvm
 
 - shell:
+  -
+    command: zsh/os.sh
   -
     command: git pull
     description: Updating dotfiles

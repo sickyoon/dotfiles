@@ -1,0 +1,34 @@
+
+# homebrew binary
+export PATH=/usr/local/bin:$PATH
+
+# android sdk
+#export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
+
+# go
+export GOPATH=$HOME/go
+export PATH=$PATH:$HOME/go/bin
+alias gob="go build -gcflags '-m -l'"
+alias goi="go install ./..."
+alias goprof="go tool pprof"
+
+# nvm
+export NVM_DIR=$HOME/.nvm
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+# rbenv
+eval "$(rbenv init -)"
+
+# virtualenvwrapper
+source /usr/local/bin/virtualenvwrapper.sh
+
+# homebrew z
+source "$(brew --prefix)/etc/profile.d/z.sh"
+
+# hugo aliases
+#alias hugod="hugo server --buildDrafts"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
+# nvm BUG FIX
+nvm use --delete-prefix v7.4.0
