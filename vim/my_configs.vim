@@ -6,4 +6,3 @@ set autoindent
 
 " disable html tidy
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
-

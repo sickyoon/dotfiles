@@ -16,3 +16,6 @@ eval "$(rbenv init -)"
 # virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
 
+# z script
+. $HOME/z.sh
+

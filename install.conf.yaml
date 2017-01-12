@@ -14,10 +14,6 @@
       force: true
       create: true
       path: vim/bundle
-    ~/.mac_zshrc:
-      force: true
-      create: true
-      path: zsh/mac_zshrc
     ~/.tmux.conf:
       force: true
       create: true
@@ -33,7 +29,15 @@
 
 - shell:
   -
-    command: zsh/os.sh
+    command: zsh/copy_zshrc.sh
+    description: copying appropriate zshrc file
+    stdout: true
+    stderr: true
+  -
+    command: python/install.sh
+    description: installing python, pip, virtualenv
+    stdout: true
+    stderr: true
   -
     command: git pull
     description: Updating dotfiles
@@ -54,9 +58,3 @@
     description: Installing python-pip
     stdout: true
     stderr: true
-  -
-    command: sudo pip install virtualenv virtualenvwrapper
-    description: Installing python virtualenv
-    stdout: true
-    stderr: true
-
