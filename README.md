@@ -13,6 +13,12 @@ brew install zsh tmux z rbenv
 rbenv init -
 ```
 
+## TODO:
+
+* NERDTree + NERDTree Git
+* https://github.com/ryanoasis/nerd-fonts
+* 
+
 ## License
 
 MIT

@@ -32,3 +32,10 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 # nvm BUG FIX
 nvm use --delete-prefix v7.4.0
+
+# set rbenv version
+rbenv global 2.4.0
+
+alias vbox="ssh -p 3022 yoons@localhost"
+alias pscan="sudo netstat -plnt"
+alias rtags="ctags -R --languages=ruby --exclude=.git --exclude=log ."

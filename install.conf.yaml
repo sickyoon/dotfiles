@@ -45,6 +45,11 @@
     stdout: true
     stderr: true
   -
+    command: git clone https://github.com/ryanoasis/nerd-fonts /tmp/nerd-fonts && /tmp/nerd-fonts/install.sh
+    description: Installing nerd-fonts
+    stdout: true
+    stderr: true
+  -
     command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     description: Installing oh-my-zsh
     stdout: true
