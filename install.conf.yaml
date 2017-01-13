@@ -54,7 +54,7 @@
     stdout: true
     stderr: true
   -
-    command: git clone https://github.com/ryanoasis/nerd-fonts /tmp/nerd-fonts && /tmp/nerd-fonts/install.sh
+    command: git clone https://github.com/ryanoasis/nerd-fonts /tmp/nerd-fonts && source /tmp/nerd-fonts/install.sh
     description: Installing nerd-fonts
     stdout: true
     stderr: true

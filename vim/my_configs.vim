@@ -1,8 +1,12 @@
 call pathogen#infect()
 
 set number
-set tabstop=4 shiftwidth=4 expandtab
 set autoindent
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
+
+" set tab aliases
+cnoreabbrev tab2 set tabstop=2 shiftwidth=2 expandtab
+cnoreabbrev tab4 set tabstop=4 shiftwidth=4 expandtab
 
 " disable html tidy
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
@@ -16,7 +20,6 @@ autocmd VimEnter * wincmd p
 
 " devicons
 set encoding=utf8
-set guifont=DroidSansMonoForPowerline\ Nerd\ Font:h11
 let g:webdevicons_enable = 1
 let g:airline_powerline_fonts = 1
 let g:webdevicons_enable_nerdtree = 1

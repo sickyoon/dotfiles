@@ -3,7 +3,7 @@
 
 personal dotfile
 
-## Installation
+## MAC Installation
 
 ```bash
 git clone https://github.com/amix/vimrc.git ~/.vim_runtime
@@ -13,11 +13,14 @@ brew install zsh tmux z rbenv
 rbenv init -
 ```
 
-## TODO:
+## Linux Installation
 
-* NERDTree + NERDTree Git
-* https://github.com/ryanoasis/nerd-fonts
-* 
+```bash
+# TODO
+```
+
+## Nerd Font
+Set terminal font
 
 ## License
 
