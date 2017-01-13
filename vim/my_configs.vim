@@ -6,7 +6,6 @@ set autoindent
 
 " disable html tidy
 let syntastic_mode_map = { 'passive_filetypes': ['html'] }
-<<<<<<< HEAD
 
 " NERDTree configs
 let g:NERDTreeWinPos = "left"
@@ -23,5 +22,3 @@ let g:airline_powerline_fonts = 1
 let g:webdevicons_enable_nerdtree = 1
 let g:webdevicons_conceal_nerdtree_brackets = 1
 let g:WebDevIconsNerdTreeGitPluginForceVAlign = 1
-=======
->>>>>>> 8149941283e597397dcd90b98351b3f1902ed90a

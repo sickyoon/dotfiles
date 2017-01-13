@@ -29,16 +29,6 @@
 
 - shell:
   -
-    command: zsh/copy_zshrc.sh
-    description: copying appropriate zshrc file
-    stdout: true
-    stderr: true
-  -
-    command: python/install.sh
-    description: installing python, pip, virtualenv
-    stdout: true
-    stderr: true
-  -
     command: git pull
     description: Updating dotfiles
     stdout: true
@@ -49,17 +39,23 @@
     stdout: true
     stderr: true
   -
-    command: git clone https://github.com/ryanoasis/nerd-fonts /tmp/nerd-fonts && /tmp/nerd-fonts/install.sh
-    description: Installing nerd-fonts
-    stdout: true
-    stderr: true
-  -
     command: sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
     description: Installing oh-my-zsh
     stdout: true
     stderr: true
   -
-    command: sudo curl -o- https://bootstrap.pypa.io/get-pip.py | python
-    description: Installing python-pip
+    command: zsh/copy_zshrc.sh
+    description: copying appropriate zshrc file
     stdout: true
     stderr: true
+  -
+    command: python/install.sh
+    description: installing python, pip, virtualenv
+    stdout: true
+    stderr: true
+  -
+    command: git clone https://github.com/ryanoasis/nerd-fonts /tmp/nerd-fonts && /tmp/nerd-fonts/install.sh
+    description: Installing nerd-fonts
+    stdout: true
+    stderr: true
+
