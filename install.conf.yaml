@@ -43,6 +43,10 @@
     description: Installing oh-my-zsh
     stdout: true
     stderr: true
+  - command: go/install.sh
+    description: install go
+    stdout: true
+    stderr: true
   -
     command: zsh/copy_zshrc.sh
     description: copying appropriate zshrc file
@@ -53,9 +57,3 @@
     description: installing python, pip, virtualenv
     stdout: true
     stderr: true
-  -
-    command: git clone https://github.com/ryanoasis/nerd-fonts /tmp/nerd-fonts && source /tmp/nerd-fonts/install.sh
-    description: Installing nerd-fonts
-    stdout: true
-    stderr: true
-

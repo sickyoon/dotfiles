@@ -1,5 +1,6 @@
 
 # go
+export PATH=$PATH:/usr/local/go/bin
 export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin
 alias gob="go build -gcflags '-m -l'"
@@ -11,7 +12,7 @@ export NVM_DIR=$HOME/.nvm
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
 
 # rbenv
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
 # virtualenvwrapper
 source /usr/local/bin/virtualenvwrapper.sh
