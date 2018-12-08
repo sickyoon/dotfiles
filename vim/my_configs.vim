@@ -14,4 +14,3 @@ let syntastic_mode_map = { 'passive_filetypes': ['html'] }
 
 " NERDTree configs
 let g:NERDTreeWinPos = "left"
-

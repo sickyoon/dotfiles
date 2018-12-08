@@ -2,9 +2,6 @@
 # homebrew binary
 export PATH=/usr/local/bin:$PATH
 
-# android sdk
-#export PATH=$PATH:$HOME/Library/Android/sdk/platform-tools
-
 # go
 export GOPATH=$HOME/go
 export PATH=$PATH:$HOME/go/bin
@@ -25,17 +22,19 @@ source /usr/local/bin/virtualenvwrapper.sh
 # homebrew z
 source "$(brew --prefix)/etc/profile.d/z.sh"
 
-# hugo aliases
-#alias hugod="hugo server --buildDrafts"
-
-test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
-
-# nvm BUG FIX
-nvm use --delete-prefix v7.4.0
-
-# set rbenv version
-rbenv global 2.4.0
-
-alias vbox="ssh -p 3022 yoons@localhost"
+# security
 alias pscan="sudo netstat -plnt"
-alias rtags="ctags -R --languages=ruby --exclude=.git --exclude=log ."
+
+# k8s
+alias k="kubectl"
+alias kns="kubens"
+
+# databases
+alias mongo="docker run -it --rm mongo:latest mongo --host host.docker.internal"
+alias mongoimport="docker run -it --rm -v $PWD:/temp mongo:latest mongoimport --host host.docker.internal"
+alias mongod="docker run --rm -p 27017:27017 --name mongo bitnami/mongodb:latest"
+alias redis-server="docker run --rm -p 6379:6379 --name redis redis:latest"
+alias redis-cli="docker run -it --rm redis:latest redis-cli -h host.docker.internal -p 6379"
+alias rabbit-server="docker run --rm -P --name rabbit -e RABBITMQ_ERLANG_COOKIE=steve rabbitmq:3-management"
+alias rabbitctl="docker run --rm -e RABBITMQ_ERLANG_COOKIE=steve -e RABBITMQ_NODENAME=rabbit@host.docker.internal rabbitmq:3 bash"
+
